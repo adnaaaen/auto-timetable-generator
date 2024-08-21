@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetable Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate Timetable</h1>
+      <form id="timetableForm">
+        <div class="form-group">
+          <label for="professorSubjectMap"
+            >Professor - Subject (comma-separated)</label
+          >
+          <textarea
+            id="professorSubjectMap"
+            rows="5"
+            placeholder="e.g., Fannie Moss : Computer Science, Aiden Lloyd : Physics"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="days">Days</label>
+          <input type="number" id="days" value="5" min="1" max="7" />
+        </div>
+        <div class="form-group">
+          <label for="hoursPerDay">Hours Per Day</label>
+          <input type="number" id="hoursPerDay" value="5" min="1" max="10" />
+        </div>
+        <div class="form-group">
+          <label for="timesPerSubject">Times Per Subject</label>
+          <input
+            type="number"
+            id="timesPerSubject"
+            value="4"
+            min="1"
+            max="10"
+          />
+        </div>
+        <div class="form-group">
+          <label for="additionalContent">Additional Content</label>
+          <input
+            type="text"
+            id="additionalContent"
+            placeholder="Enter title or additional content for PDF"
+          />
+        </div>
+
+        <button type="submit">Generate</button>
+      </form>
+      <div id="timetableOutput"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
