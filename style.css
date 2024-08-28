@@ -84,3 +84,18 @@ th {
   background-color: #333; 
   color: #e0e0e0; 
 }
+
+.batch-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.batch-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.batch-input:last-child {
+  margin-right: 0;
+}
