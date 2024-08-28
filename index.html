@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
-
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
@@ -15,46 +14,139 @@
   </head>
   <body>
     <div class="container">
-      <h1>Generate Timetable</h1>
+      <h1>Generate Timetables</h1>
       <form id="timetableForm">
         <div class="form-group">
-          <label for="professorSubjectMap"
-            >Professor - Subject (comma-separated)</label
-          >
+          <label for="professorSubjectMapBatch1">Batch 1</label>
           <textarea
-            id="professorSubjectMap"
+            id="professorSubjectMapBatch1"
             rows="5"
-            placeholder="e.g., Fannie Moss : Computer Science, Aiden Lloyd : Physics"
+            placeholder="e.g., Prof1: Subject1, Prof2: Subject2"
           ></textarea>
-        </div>
-        <div class="form-group">
-          <label for="days">Days</label>
-          <input type="number" id="days" value="5" min="1" max="7" />
-        </div>
-        <div class="form-group">
-          <label for="hoursPerDay">Hours Per Day</label>
-          <input type="number" id="hoursPerDay" value="5" min="1" max="10" />
-        </div>
-        <div class="form-group">
-          <label for="timesPerSubject">Times Per Subject</label>
-          <input
-            type="number"
-            id="timesPerSubject"
-            value="4"
-            min="1"
-            max="10"
-          />
-        </div>
-        <div class="form-group">
-          <label for="additionalContent">Additional Content</label>
-          <input
-            type="text"
-            id="additionalContent"
-            placeholder="Enter title or additional content for PDF"
-          />
+
+          <div class="batch-inputs">
+            <div class="batch-input">
+              <label for="daysBatch1">Days</label>
+              <input type="number" id="daysBatch1" value="5" min="1" max="7" />
+            </div>
+            <div class="batch-input">
+              <label for="hoursPerDayBatch1">Hours Per Day</label>
+              <input
+                type="number"
+                id="hoursPerDayBatch1"
+                value="5"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="batch-input">
+              <label for="timesPerSubjectBatch1">Times Per Subject</label>
+              <input
+                type="number"
+                id="timesPerSubjectBatch1"
+                value="4"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="batch-input">
+              <label for="additionalContentBatch1">Additional Content</label>
+              <input
+                type="text"
+                id="additionalContentBatch1"
+                placeholder="Enter title or additional content for PDF"
+              />
+            </div>
+          </div>
         </div>
 
-        <button type="submit">Generate</button>
+        <div class="form-group">
+          <label for="professorSubjectMapBatch2">Batch 2</label>
+          <textarea
+            id="professorSubjectMapBatch2"
+            rows="5"
+            placeholder="e.g., Prof3: Subject3, Prof4: Subject4"
+          ></textarea>
+          <div class="batch-inputs">
+            <div class="batch-input">
+              <label for="daysBatch2">Days</label>
+              <input type="number" id="daysBatch2" value="5" min="1" max="7" />
+            </div>
+            <div class="batch-input">
+              <label for="hoursPerDayBatch2">Hours Per Day</label>
+              <input
+                type="number"
+                id="hoursPerDayBatch2"
+                value="5"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="batch-input">
+              <label for="timesPerSubjectBatch2">Times Per Subject</label>
+              <input
+                type="number"
+                id="timesPerSubjectBatch2"
+                value="4"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="batch-input">
+              <label for="additionalContentBatch2">Additional Content</label>
+              <input
+                type="text"
+                id="additionalContentBatch2"
+                placeholder="Enter title or additional content for PDF"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="professorSubjectMapBatch3">Batch 3</label>
+          <textarea
+            id="professorSubjectMapBatch3"
+            rows="5"
+            placeholder="e.g., Prof5: Subject5, Prof6: Subject6"
+          ></textarea>
+          <div class="batch-inputs">
+            <div class="batch-input">
+              <label for="daysBatch3">Days</label>
+              <input type="number" id="daysBatch3" value="5" min="1" max="7" />
+            </div>
+            <div class="batch-input">
+              <label for="hoursPerDayBatch3">Hours Per Day</label>
+              <input
+                type="number"
+                id="hoursPerDayBatch3"
+                value="5"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="batch-input">
+              <label for="timesPerSubjectBatch3">Times Per Subject</label>
+              <input
+                type="number"
+                id="timesPerSubjectBatch3"
+                value="4"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="batch-input">
+              <label for="additionalContentBatch3">Additional Content</label>
+              <input
+                type="text"
+                id="additionalContentBatch3"
+                placeholder="Enter title or additional content for PDF"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Generate All Timetables</button>
       </form>
       <div id="timetableOutput"></div>
     </div>
